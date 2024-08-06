@@ -21,7 +21,7 @@ fun DemoScreen(items: List<ListItem>) {
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
             .fillMaxSize()
-            .background(DBTheme.colors.neutral.bgLvl3Enabled)
+            .background(DBTheme.colors.neutral.bgBasicLevel3Default)
     ) {
         items(items) { item ->
             ListItemComponent(item)
@@ -34,18 +34,18 @@ fun ListItemComponent(item: ListItem) {
     Column(
         modifier = Modifier
             .padding(DBTheme.dimensions.spacing.fixedMd)
-            .background(DBTheme.colors.neutral.bgLvl1Enabled)
+            .background(DBTheme.colors.neutral.bgBasicLevel1Default)
     ) {
         Text(
             text = item.title,
             style = DBTheme.typography.h3,
-            color = DBTheme.colors.neutral.onBgEnabled,
+            color = DBTheme.colors.neutral.onBgBasicEmphasis100Default,
             modifier = Modifier.padding(DBTheme.dimensions.spacing.fixedXs)
         )
         Text(
             text = item.description,
             style = DBTheme.typography.body,
-            color = DBTheme.colors.neutral.onBgEnabled,
+            color = DBTheme.colors.neutral.onBgBasicEmphasis100Default,
             modifier = Modifier.padding(DBTheme.dimensions.spacing.fixedXs)
         )
     }
